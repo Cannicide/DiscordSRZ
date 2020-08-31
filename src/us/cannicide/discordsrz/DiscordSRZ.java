@@ -93,7 +93,7 @@ public class DiscordSRZ extends JavaPlugin {
         resp = resp.replace("%code%", "" + code).replace("%data%", data).replace("%placeholders%", plc);
 
         byte[] out = resp.getBytes(StandardCharsets.UTF_8);
-        sender.sendMessage("Sent request to url: " + config.getString("url"));
+        if (config.getBoolean("debug-mode")) sender.sendMessage("Sent request to url: " + config.getString("url"));
         new PostRequest(config.getString("url"), out);
     }
 

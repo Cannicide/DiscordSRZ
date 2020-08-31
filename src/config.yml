@@ -39,6 +39,9 @@ messages:
   notlinked: "&cYou must have a linked account to be able to do that..."
   noperms: "&cYou do not have the permissions to do that."
 
+# Enables the "successfully sent to URL" message. DO NOT enable unless you are testing something or fixing an issue.
+debug-mode: false
+
 # DO NOT TOUCH, this code is used to pair accounts and is automatically changed.
 code: 10000
 
