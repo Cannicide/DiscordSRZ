@@ -380,7 +380,7 @@ public class DiscordSRZ extends JavaPlugin {
          */
         @Override
         public String getIdentifier(){
-            return "punishcmd";
+            return "discordsrz";
         }
 
         /**
@@ -415,7 +415,7 @@ public class DiscordSRZ extends JavaPlugin {
                 return "";
             }
 
-            // %discord_linked%
+            // %discordsrz_linked%
             if(identifier.equals("linked")){
                 return isLinkedPlayer(player) ? "yes" : "no";
             }
