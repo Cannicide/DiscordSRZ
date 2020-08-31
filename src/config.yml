@@ -1,0 +1,49 @@
+# DiscordSRZ
+# By Cannicide (JayCraft2)
+
+# Do not change
+version: 1.0.0
+
+# Url to POST user data to, a webserver that exchanges data between the plugin and discord bot
+# This URL must handle JSON data in the format: {"user":"<uuid>","code":10000,"data":["Role1", "Role2"]}
+# For codes, if the code sent is a 5-digit number, the user has not yet been paired with a discord account (code is to pair)
+# If the code is 0, the user has already been paired and needs its data to be updated
+# If the code is -1, the user is requesting to be unpaired with the discord account
+url: "https://example.com/somewhere/post"
+
+# List of permissions
+groups: ["group.admin", "group.builder"]
+# and the names of the discord roles to sync them to, respectively (follow same order)
+roles: ["Administrators", "Builders"]
+
+# List of PlaceholderAPI placeholders; placeholder data is sent to the webserver on each sync
+placeholders: ["%player_ip%", "%player_online%"]
+
+# The name of the discord bot
+name: "Zhorde Discord Bot"
+
+# Customize plugin messages
+# Words surrounded in {} are necessary variables
+messages:
+  help:
+    help: "&b{command}&7 - List DiscordSRZ commands."
+    link: "&b{command}&7 - Link your minecraft and discord accounts."
+    unlink: "&b{command}&7 - Unlink your minecraft and discord accounts."
+    reload: "&b{command}&7 - Reloads the config."
+  link:
+    instructions: "&dSend the following code in a DM to the server's discord bot (&7{name}&d)"
+    code: "&dYour code is: &b{code}"
+  unlink: "&dYour minecraft and discord accounts have been unlinked."
+  invalidarg: "&4Invalid argument."
+  alreadylinked: "&cYou've already linked your account..."
+  notlinked: "&cYou must have a linked account to be able to do that..."
+  noperms: "&cYou do not have the permissions to do that."
+
+# Enables the "successfully sent to URL" message. DO NOT enable unless you are testing something or fixing an issue.
+debug-mode: false
+
+# DO NOT TOUCH, this code is used to pair accounts and is automatically changed.
+code: 10000
+
+# DO NOT TOUCH, this field identifies players who have already linked their account.
+linked: []
