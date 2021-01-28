@@ -1,0 +1,18 @@
+name: ScavengerLink
+version: 3.2.1
+author: Cannicide
+description: A lightweight, powerful alternative to DiscordSRV. Connects minecraft to a NodeJS discord bot.
+main: us.cannicide.discordsrz.DiscordSRZ
+softdepend:
+  - PlaceholderAPI
+commands:
+  discord:
+    description: The commands for ScavengerLink.
+    usage: /discord <help|link|unlink|reload|invite>
+permissions:
+  scavlink.admin:
+    description: Admin permissions for ScavengerLink.
+    default: false
+  scavlink.use:
+    description: Permission to use the /discord command.
+    default: true

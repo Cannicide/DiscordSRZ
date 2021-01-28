@@ -1,0 +1,57 @@
+# ScavengerLink (1.16.4 fork of DiscordSRZ)
+# By Cannicide
+
+# Do not change
+version: 1.0.0
+
+# Url to POST user data to, a webserver that exchanges data between the plugin and discord bot
+# This URL must handle JSON data in the format: {"user":"<uuid>","code":10000,"data":["Role1", "Role2"]}
+# For codes, if the code sent is a 5-digit number, the user has not yet been paired with a discord account (code is to pair)
+# If the code is 0, the user has already been paired and needs its data to be updated
+# If the code is -1, the user is requesting to be unpaired with the discord account
+url: "https://example.com/somewhere/post"
+
+# List of permissions
+groups: ["group.admin", "group.builder"]
+# and the names of the discord roles to sync them to, respectively (follow same order)
+roles: ["Administrators", "Builders"]
+
+# List of PlaceholderAPI placeholders; placeholder data is sent to the webserver on each sync
+placeholders: ["%player_online%"]
+
+# The name of the discord bot
+name: "Scavenger"
+
+# An invite to your discord server
+invite: "https://discord.gg/invite"
+
+# If true, doing '/discord' will return the discord invite instead of the help menu
+inviteOnCommand: false
+
+# Customize plugin messages
+# Words surrounded in {} are necessary variables
+messages:
+  help:
+    help: "&b{command}&7 - List ScavengerLink commands."
+    link: "&b{command}&7 - Link your minecraft and discord accounts."
+    unlink: "&b{command}&7 - Unlink your minecraft and discord accounts."
+    reload: "&b{command}&7 - Reloads the config."
+    invite: "&b{command}&7 - Sends an invite to our discord server."
+  link:
+    instructions: "&dSend the following code in a DM to the server's discord bot (&7{name}&d)"
+    code: "&dYour code is: &b{code}"
+  unlink: "&dYour minecraft and discord accounts have been unlinked."
+  invite: "&3Join our discord server!\n&b{invite}"
+  invalidarg: "&4Invalid argument."
+  alreadylinked: "&cYou've already started the linking process...\n&dYour code was: &b{code}\n&dSend the code to the server's discord bot to link your accounts."
+  notlinked: "&cYou must have a linked account to be able to do that..."
+  noperms: "&cYou do not have the permissions to do that."
+
+# Enables the "successfully sent to URL" message. DO NOT enable unless you are testing something or fixing an issue.
+debug-mode: false
+
+# DO NOT TOUCH, this code is used to pair accounts and is automatically changed.
+code: 10000
+
+# DO NOT TOUCH, this field identifies players who have already linked their account.
+linked: {}
