@@ -1,5 +1,5 @@
 # ScavengerLink
-Bukkit/Spigot plugin inspired by DiscordSRV. A light plugin that transfers data of your choice from a minecraft server to a webserver, allowing you to implement DiscordSRV-like features such as role synchronization on your own NodeJS discord bot. Formerly known as DiscordSRZ.
+Spigot plugin inspired by DiscordSRV. A light plugin that transfers data of your choice from a minecraft server to a webserver, allowing you to implement DiscordSRV-like features such as role synchronization on your own NodeJS discord bot. Formerly known as DiscordSRZ.
 
 ## Not Just Another DiscordSRV
 Though inspired by DiscordSRV, ScavengerLink is not a fork or clone of DiscordSRV. ScavengerLink implements a code-based system to link minecraft accounts to discord accounts by submitting JSON data (including a unique code, player UUID, and placeholder data) to a specified URL in a POST request.
