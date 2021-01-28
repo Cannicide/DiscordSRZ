@@ -15,8 +15,8 @@ DiscordSRZ is not affiliated with DiscordSRV, and does not use any code from the
 ## How Much Lighter?
 ScavengerLink is a very light plugin. Here's a direct size comparison.
 
-DiscordSRV 1.21.3: 8.11 MB (8110 KB)
-ScavengerLink 3.2.1: 0.015 MB (15 KB)
+- DiscordSRV 1.21.3 --> **8.11 MB** (8110 KB)
+- ScavengerLink 3.2.1 --> **0.015 MB** (15 KB)
 
 By exporting the actual role-assigning and other discord-related features to your own discord bot instead of including a pre-written discord bot within this plugin, ScavengerLink is able to minimize its size tremendously. All the plugin needs to do is manage numeric codes (creating a new one when a player attempts to link), send a POST request to your bot (with the minecraft user's UUID, generated code, any configured permission groups, and any configured placeholder data), and your bot will handle the rest.
 
@@ -34,6 +34,7 @@ Here is an example of the POST request body:
     } 
 }
 ```
+
 The code is an integer that changes depending on whether this is an initial sync, update sync, or unsync POST request. On initial sync (when a user begins linking), `code` is the 5-digit generated code for the user. On update sync (when a linked user joins/leaves MC server), `code` is 0. On unsync (when a user unlinks), `code` is -1.
 
 If you want a working example of some bot-side code that works with ScavengerLink, I use ScavengerLink in my [scav-bot](https://github.com/Cannicide/scav-bot/blob/master/discordsrz.js) discord bot (written in NodeJS and uses discord.js) and have fully functional role synchronization code written there. Note that my bot code is heavily dependent on my custom storage and DM-interpreter systems, so you will need to tweak the code to work with your own storage and message-handling systems.
@@ -41,4 +42,4 @@ If you want a working example of some bot-side code that works with ScavengerLin
 ## Can I Modify the Code?
 Feel free to modify the code or make improvements, both with the ScavengerLink plugin and the scav-bot discord bot. Both are completely open-source, and all I ask is that you give credit where credit is due if you create your own fork or modification. It took me several weeks to create the plugin and several more to perfect it, and I have been working on the discord bot regularly for over a year now.
 
-Created by Cannicide#2753
+Created by **Cannicide#2753**
