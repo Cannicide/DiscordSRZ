@@ -40,3 +40,5 @@ If you want a working example of some bot-side code that works with ScavengerLin
 
 ## Can I Modify the Code?
 Feel free to modify the code or make improvements, both with the ScavengerLink plugin and the scav-bot discord bot. Both are completely open-source, and all I ask is that you give credit where credit is due if you create your own fork or modification. It took me several weeks to create the plugin and several more to perfect it, and I have been working on the discord bot regularly for over a year now.
+
+Created by Cannicide#2753
